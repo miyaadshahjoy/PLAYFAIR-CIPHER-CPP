@@ -32,14 +32,7 @@ string unique(char key[100]){
     key = toUpperCase(key);
     ///replacing J with I
     key = replaceJWithI(key);
-    cout<<key<<endl;
-    ///taking only alphabets from the plain text
-    string onlyAlpha;
-    for(int i = 0; i < strlen(key); i++){
-        if(key[i] >= 65 && key[i] <= 90){
-            onlyAlpha += key[i];
-        }
-    }
+    //cout<<key<<endl;
 
     for(int i = 0; i < strlen(key); i++){
 
@@ -128,7 +121,6 @@ string encrypt(char* plainText){
 
     ///replacing J with I in plain text
     plainText = replaceJWithI(plainText);
-    cout<<plainText<<endl;
 
     if(strlen(plainText) % 2 != 0)
         plainText += 'X';
@@ -141,7 +133,7 @@ string encrypt(char* plainText){
 
 
     for(int i = 0; i < n; i++){
-        cout<<pairs[i]<<endl;
+        //cout<<pairs[i]<<endl;
         int i1 = indexOf(pairs[i][0])[0];
         int j1 = indexOf((pairs[i][0]))[1];
         int i2 = indexOf(pairs[i][1])[0];
